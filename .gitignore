@@ -1,0 +1,8 @@
+# Keys
+.env
+
+# Generated and downloaded files
+assets/vo/
+assets/music/
+assets/footage/
+out/

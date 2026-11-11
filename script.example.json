@@ -1,0 +1,16 @@
+{
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Eric",
+    "model": "eleven_v4",
+    "settings": { "stability": 0.45, "similarity_boost": 0.85, "style": 0.3, "use_speaker_boost": true, "speed": 1.0 }
+  },
+  "format": "pcm_48000",
+  "bpm": 110,
+  "scenes": [
+    { "id": "s1_open", "min": 4, "engine": "python", "vo": "There's always more to build." },
+    { "id": "s2_who", "min": 5, "engine": "hyperframes", "vo": "I'm Vedran. I take ideas to production." },
+    { "id": "s3_lab", "min": 6, "engine": "python", "vo": "In the Lab, I build models, machines and tools." },
+    { "id": "s4_end", "min": 4, "engine": "hyperframes", "vo": "Say hi at petrach.dev." }
+  ]
+}
