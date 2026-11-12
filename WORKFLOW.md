@@ -35,7 +35,7 @@ Free option: a track from the YouTube Audio Library, cut to length with a fade.
 ## 5. Picture: HyperFrames first, Python for the heavy parts
 
 - **HyperFrames** for most scenes: titles, captions, lower thirds, UI walk-throughs, charts, code, transitions. A scene is an HTML page with seekable animation, so the agent writes it like a web page, checks single frames, and HyperFrames renders it to MP4 the same way every time. Its registry has ready blocks to start from; restyle them to the brand instead of using them as they are.
-- **Python** (skia-python, NumPy, OpenCV, piped to ffmpeg) for what HTML is bad at: thousands of animated shapes, particle systems, brand patterns drawn from the logo geometry, colour grades on stock footage, bloom. Skia on the GPU draws a frame in a few milliseconds; a chunked renderer splits the video into parts and renders them in parallel.
+- **Python** (skia-python, NumPy, OpenCV, piped to ffmpeg) for what HTML is bad at: thousands of animated shapes, particle systems, brand patterns drawn from the logo geometry, colour grades on stock footage, bloom.
 - **Blender** (Cycles) for real 3D models, rendered as image sequences and composited in.
 - **Stock footage** from Pixabay, picked from a numbered contact sheet, graded to the brand. Keep the credits file.
 
@@ -43,9 +43,11 @@ Free option: a track from the YouTube Audio Library, cut to length with a fade.
 
 Place each voice line at its scene's cue, duck the music under the voice, then measure loudness and apply one gain to -14 LUFS (two-pass loudnorm), which is where YouTube plays it. Export H.264 MP4. On an NVIDIA card, NVENC makes the final encode a lot faster.
 
-## 7. Feedback loop
+## 7. Notes and the final render
 
 Watch it and write what bugs you, one sentence at a time. Preview at 720p and re-render only the scene that changed, not the whole video. Expect five or six rounds.
+
+When the notes are done, render the whole video once at full resolution, 1080p or 4K, and run the mix from step 6 on it. That file in `out/` is the one to publish. How long it takes depends on the computer and the resolution.
 
 ## Rules
 
